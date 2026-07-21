@@ -9,15 +9,25 @@ html {
 
 nav {
     background-color: navy;
-    padding: 15px;
+    padding: 15px 30px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 15px;
+    margin: 0 15px;
     font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
 }
 
 section {
@@ -45,12 +55,17 @@ button:hover {
     transform: scale(1.05);
 }
 .profile {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid navy;
-    margin-bottom: 20px;
+    border: 6px solid navy;
+    box-shadow: 0 0 25px rgba(0, 0, 128, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 0, 128, 0.5);
 }
 #about {
     background-color: white;
@@ -93,7 +108,13 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 8px gray;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px gray;
+}
+
 
 .project h3 {
     color: navy;
@@ -258,4 +279,77 @@ input, textarea {
 
 textarea {
     height: 120px;
+}
+.project-btn {
+    display: inline-block;
+    background-color: navy;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.project-btn:hover {
+    background-color: green;
+}
+.tags span {
+    display: inline-block;
+    background-color: navy;
+    color: white;
+    padding: 5px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: navy;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffd700;
 }
